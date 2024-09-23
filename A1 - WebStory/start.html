@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--  makes this a HTML5 doc -->
+<html lang="en">
+<head>
+    <!--  meta info prob dont need but evey one uses so might as well -->
+    <meta charset="UTF-8">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+                
+       
+        .container {
+            
+            display: flex; 
+            height: 100%;
+            width: 100%;
+        }
+
+        .half-page-bg {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.3s ease;
+        }
+
+        .choiceA {
+            background-image: url('images/charge1.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .choiceB {
+            background-image: url('images/forest.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container:hover .half-page-bg {
+            flex: 1;
+        }
+
+        .container .half-page-bg:hover {
+            flex: 4;
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .half-page-bg:hover .hover-text {
+            opacity: 1;
+        }
+
+        .content {
+            display: none;
+    
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="RouteAin.html" class="half-page-bg choiceA">
+            <div class="hover-text">Charge your Phone</div>
+        </a>
+        <a href="RouteBin.html" class="half-page-bg choiceB">
+            <div class="hover-text">Get Out of your Car</div>
+        </a>
+    </div>
+    
+</body>
+</html>
