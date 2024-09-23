@@ -1,25 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head> 
-<h1> the wdhada</h1>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
 
+        .container {
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .half-page-bg {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.3s ease;
+        }
+
+        .choiceA {
+            background-image: url('../images/yell2.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .choiceB {
+            background-image: url('../images/fours3.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container:hover .half-page-bg {
+            flex: 1;
+        }
+
+        .container .half-page-bg:hover {
+            flex: 4;
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .half-page-bg:hover .hover-text {
+            opacity: 1;
+        }
+
+        .content {
+            display: none;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-<p> get out  </p>
-
-
-<p><a href=RouteA.html>charge phone</a></p>
-
-<p><a href=RouteB.html>get out </a></p>
-
-
-
+    <div class="container">
+        <a href="scare/yellin.html" class="half-page-bg choiceA">
+            <div class="hover-text"> yell at him</div>
+        </a>
+        <a href="scare/foursin.html" class="half-page-bg choiceB">
+            <div class="hover-text"> hop on all fours </div>
+        </a>
+    </div>
 </body>
-
-
-
-
-
-
 </html>
