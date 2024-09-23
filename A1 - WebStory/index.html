@@ -1,93 +1,47 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Split Page</title>
+  
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            width: 100%;
+            font-family: Arial, sans-serif;
         }
-        
-
         .container {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
             height: 100%;
-            width: 100%;
+       
+            background-size: cover;
+            background-position: center;
         }
-
-        .half-page-bg {
-            flex: 1;
+        .content {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: white;
             text-align: center;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: flex 0.3s ease;
-        }
-
-        .choiceA {
-            background-image: url('images/pexels-photo-1671325.jpeg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .choiceB {
-            background-image: url('images/images.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .container:hover .half-page-bg {
-            flex: 1;
-        }
-
-        .container .half-page-bg:hover {
-            flex: 4;
-        }
-
-        .hover-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: white;
-            font-size: 24px;
-            font-weight: bold;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .half-page-bg:hover .hover-text {
-            opacity: 1;
-        }
-
-        .content {
-            display: none;
-    
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="RouteAin.html" class="half-page-bg choiceA">
-            <div class="hover-text">Charge your Phone</div>
-        </a>
-        <a href="RouteBin.html" class="half-page-bg choiceB">
-            <div class="hover-text">Get Out of your Car</div>
-        </a>
+        <div class="content">
+            <h1>The game is played by pressing each image to futher the story </h1>
+            <p> The story begins with your car breaking down while driving home from work </p>
+            <a href="start.html"> click here to continue</a>
+        </div>
     </div>
-    
 </body>
 </html>
